@@ -1,0 +1,38 @@
+[
+  {
+    "url": "./audio/breakbeats.mp3",
+    "name": "Break Beats"
+  },
+  {
+    "url": "./audio/electricGuitar.mp3",
+    "name": "Electric Guitar"
+  },
+  {
+    "url": "./audio/future_func.mp3",
+    "name": "Future Func"
+  },
+  {
+    "url": "./audio/grooveA.mp3",
+    "name": "Groove A"
+  },
+  {
+    "url": "./audio/grooveB.mp3",
+    "name": "Groove B"
+  },
+  {
+    "url": "./audio/heavyFunc.mp3",
+    "name": "Heavy Func"
+  },
+  {
+    "url": "./audio/MazePolitics.mp3",
+    "name": "Maze Politics"
+  },
+  {
+    "url": "./audio/SilentStar.mp3",
+    "name": "Silent Star"
+  },
+  {
+    "url": "./audio/stompySlosh.mp3",
+    "name": "Stompy Slosh"
+  }
+]
