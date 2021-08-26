@@ -4,11 +4,14 @@ export default function LoopSample({ sample, active, isPlaying, numSamples }) {
 
   const audioRef = useRef(new Audio(sample.url));
 
+  //Play sample
   const toPlay = () => {
     setPlay(true);
     audioRef.current.play();
+    audioRef.current.loop = true;
   };
 
+  //Pause sample
   const toPause = () => {
     setPlay(false);
     audioRef.current.pause();
@@ -18,10 +21,15 @@ export default function LoopSample({ sample, active, isPlaying, numSamples }) {
     play ? toPause() : toPlay();
   };
 
+  useEffect(() => {
+    toPause();
+  }, [active]);
+
   return (
     <div
-      onClick={() => (active ? checkPlay() : setPlay(false))}
+      onClick={() => active && checkPlay()}
       className={play ? 'play' : 'notPlay'}>
+      {console.log(active)}
       <div>{sample.name}</div>
     </div>
   );
