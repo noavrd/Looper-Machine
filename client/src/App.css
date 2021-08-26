@@ -1,13 +1,42 @@
+body {
+  background-image: url('./cool-background1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
 .play {
-  background-color: aquamarine;
+  background-color: #9cbfa5;
 }
 
 .notPlay {
-  background-color: red;
+  background-color: #d4435c;
 }
 
 button {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
+}
+
+h1 {
+  font-family: 'Sonsie One', cursive;
+  font-size: 10vh;
+}
+
+.container {
+  /* margin-left: 40vw; */
+  display: grid;
+  grid-template-columns: 7em 7em 7em;
+  grid-gap: 0.5em;
+  /* grid-auto-flow: row; */
+
+  grid-template-rows: 6em 6em 6em;
+}
+.sample {
+  transition: 0.8s;
+  border-radius: 10px;
+  cursor: pointer;
+  padding-top: 5vh;
 }

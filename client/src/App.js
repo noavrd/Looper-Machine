@@ -12,29 +12,45 @@ import SilentStar from './components/audio/SilentStar.mp3';
 import stompySlosh from './components/audio/stompySlosh.mp3';
 
 function App() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [startPlaySample, setStartPlaySample] = useState(false);
   const [active, setActive] = useState(false);
-  const [numSamples] = useState(0);
+  const [numSamples, setNumSamples] = useState(0);
+  const samplesToPlay = [];
 
+  useEffect(() => {
+    numSamples > 0 &&
+      setInterval(() => {
+        setStartPlaySample(true);
+      }, 8000);
+    // setStartPlaySample(false);
+  });
   return (
     <div className="App">
-      <h1>LOOP</h1>
+      {console.log(startPlaySample)}
+      <h1>Loop</h1>
       <button
         className={active ? 'fa fa-pause-circle-o' : 'fa fa-play-circle-o '}
         aria-hidden="true"
-        onClick={() => setActive(!active)}></button>
-
-      {data.map((sample, i) => {
-        return (
-          <LoopSample
-            sample={sample}
-            key={i}
-            active={active}
-            isPlaying={isPlaying}
-            numSamples={numSamples}
-          />
-        );
-      })}
+        onClick={() => {
+          setActive(!active);
+          setNumSamples(0);
+        }}></button>
+      {console.log(numSamples)}
+      <div className="container">
+        {data.map((sample, i) => {
+          return (
+            <LoopSample
+              sample={sample}
+              key={i}
+              active={active}
+              startPlaySample={startPlaySample}
+              setNumSamples={setNumSamples}
+              numSamples={numSamples}
+              samplesToPlay={samplesToPlay}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
