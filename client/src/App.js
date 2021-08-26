@@ -27,14 +27,8 @@ function App() {
   return (
     <div className="App">
       {console.log(startPlaySample)}
-      <h1>Loop</h1>
-      <button
-        className={active ? 'fa fa-pause-circle-o' : 'fa fa-play-circle-o '}
-        aria-hidden="true"
-        onClick={() => {
-          setActive(!active);
-          setNumSamples(0);
-        }}></button>
+      <h1>Looper</h1>
+
       {console.log(numSamples)}
       <div className="container">
         {data.map((sample, i) => {
@@ -51,6 +45,17 @@ function App() {
           );
         })}
       </div>
+
+      <button
+        className={
+          active ? 'fa fa-pause-circle-o active' : 'fa fa-play-circle-o active'
+        }
+        aria-hidden="true"
+        onClick={() => {
+          setActive(!active);
+          setNumSamples(0);
+        }}></button>
+      {!active && <div className="note">To start the loop hit play</div>}
     </div>
   );
 }
