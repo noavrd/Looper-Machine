@@ -1,27 +1,28 @@
-import { useEffect, useState } from 'react';
-
-export default function LoopSample({ sample, active }) {
+import { useEffect, useState, useRef } from 'react';
+export default function LoopSample({ sample, active, isPlaying, numSamples }) {
   const [play, setPlay] = useState(false);
-  console.log(sample);
-  console.log(sample.url);
-  const toggle = () => setPlay(!play);
-  const [song, setSong] = useState('');
-  let audio = new Audio(sample.url);
-  useEffect(() => {
-    play ? audio.play() : audio.pause();
-  }, [play]);
 
-  {
-  }
+  const audioRef = useRef(new Audio(sample.url));
+
+  const toPlay = () => {
+    setPlay(true);
+    audioRef.current.play();
+  };
+
+  const toPause = () => {
+    setPlay(false);
+    audioRef.current.pause();
+  };
+
+  const checkPlay = () => {
+    play ? toPause() : toPlay();
+  };
+
   return (
     <div
-      onClick={() => active && setPlay(!play)}
+      onClick={() => (active ? checkPlay() : setPlay(false))}
       className={play ? 'play' : 'notPlay'}>
-      {/* <div>{sample.name}</div>
-      <audio controls>
-        <source src={sample.url.url} type="audio/ogg"></source>
-      </audio> */}
-      <button onClick={toggle}>{play ? 'Pause' : 'Play'}</button>
+      <div>{sample.name}</div>
     </div>
   );
 }
