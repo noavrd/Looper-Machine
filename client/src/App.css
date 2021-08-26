@@ -15,7 +15,7 @@ body {
 
 .notPlay {
   background-color: #d4435c;
-  color: wheat;
+  /* color: wheat; */
 }
 
 button {
@@ -57,4 +57,7 @@ h1 {
 .sample:hover {
   opacity: 1;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.16), 0 10px 15px rgba(0, 0, 0, 0.23);
+}
+.icon {
+  font-size: 8vh;
 }

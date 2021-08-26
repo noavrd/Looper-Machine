@@ -41,7 +41,8 @@ export default function LoopSample({
     <div
       onClick={() => active && checkPlay()}
       className={play ? 'play sample' : 'notPlay sample'}>
-      <div>{sample.name}</div>
+      {/* <div>{sample.name}</div> */}
+      <i className={`${sample.icon} icon`}></i>
     </div>
   );
 }

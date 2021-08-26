@@ -64,38 +64,47 @@ const data = [
   {
     url: breakBeats,
     name: 'Break Beats',
+    icon: 'fas fa-record-vinyl',
   },
   {
     url: electricGuitar,
     name: 'Electric Guitar',
+    icon: 'fas fa-guitar',
   },
   {
     url: future_func,
     name: 'Future Func',
+    icon: 'fab fa-itch-io',
   },
   {
     url: grooveA,
     name: 'Groove A',
+    icon: 'fas fa-headphones',
   },
   {
     url: grooveB,
     name: 'Groove B',
+    icon: 'fas fa-music',
   },
   {
     url: heavyFunc,
     name: 'Heavy Func',
+    icon: 'fas fa-compact-disc',
   },
   {
     url: MazePolitics,
     name: 'Maze Politics',
+    icon: 'fab fa-reddit-alien',
   },
   {
     url: SilentStar,
     name: 'Silent Star',
+    icon: 'fas fa-star',
   },
   {
     url: stompySlosh,
     name: 'Stompy Slosh',
+    icon: 'fas fa-drum',
   },
 ];
 export default App;
