@@ -37,15 +37,7 @@
   },
   "main": "index.js",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/noavrd/moveo.git"
-  },
   "author": "Noa Shalom",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/noavrd/moveo/issues"
-  },
-  "homepage": "https://github.com/noavrd/moveo#readme",
   "description": ""
 }
