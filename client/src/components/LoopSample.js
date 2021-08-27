@@ -5,30 +5,44 @@ export default function LoopSample({
   startPlaySample,
   setNumSamples,
   numSamples,
-  samplesToPlay,
+  setStartPlaySample,
 }) {
   const [play, setPlay] = useState(false);
+  // const
 
   const audioRef = useRef(new Audio(sample.url));
 
   //Play sample
   const toPlay = () => {
     if (numSamples === 0) {
-      audioRef.current.play();
-      audioRef.current.loop = true;
+      setStartPlaySample(true);
+      // audioRef.current.play();
+      // audioRef.current.loop = true;
     }
-    samplesToPlay.push(sample.name);
     setPlay(true);
     setNumSamples(numSamples + 1);
   };
 
+  useEffect(() => {
+    if (startPlaySample && play) {
+      console.log('enterrrr');
+      audioRef.current.play();
+      audioRef.current.loop = true;
+      // } else if (startPlaySample && numSamples === 1 && play) {
+      //   console.log('starttttt');
+      //   audioRef.current.play();
+      //   audioRef.current.loop = true;
+    }
+  }, [startPlaySample]);
+  console.log(startPlaySample, play);
   //Pause sample
   const toPause = () => {
     setPlay(false);
     audioRef.current.pause();
+    audioRef.current.remove();
     numSamples !== 0 && setNumSamples(numSamples - 1);
   };
-
+  console.log(numSamples);
   const checkPlay = () => {
     play ? toPause() : toPlay();
   };

@@ -15,21 +15,25 @@ function App() {
   const [startPlaySample, setStartPlaySample] = useState(false);
   const [active, setActive] = useState(false);
   const [numSamples, setNumSamples] = useState(0);
-  const samplesToPlay = [];
 
   useEffect(() => {
-    numSamples > 0 &&
+    numSamples >= 1 &&
       setInterval(() => {
         setStartPlaySample(true);
       }, 8000);
-    // setStartPlaySample(false);
-  });
+    if (numSamples > 1) {
+      setStartPlaySample(false);
+    }
+    // numSamples === 1 ? setStartPlaySample(true) : setStartPlaySample(false);
+    // numSamples === 0 && setStartPlaySample(true);
+  }, [numSamples]);
   return (
     <div className="App">
-      {console.log(startPlaySample)}
+      {/* {console.log(startPlaySample)} */}
       <h1>Looper</h1>
 
-      {console.log(numSamples)}
+      {/* {console.log(numSamples)} */}
+
       <div className="container">
         {data.map((sample, i) => {
           return (
@@ -40,7 +44,7 @@ function App() {
               startPlaySample={startPlaySample}
               setNumSamples={setNumSamples}
               numSamples={numSamples}
-              samplesToPlay={samplesToPlay}
+              setStartPlaySample={setStartPlaySample}
             />
           );
         })}
