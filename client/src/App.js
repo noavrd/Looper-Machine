@@ -15,25 +15,31 @@ function App() {
   const [startPlaySample, setStartPlaySample] = useState(false);
   const [active, setActive] = useState(false);
   const [numSamples, setNumSamples] = useState(0);
+  let startLoop;
 
   useEffect(() => {
-    numSamples >= 1 &&
-      setInterval(() => {
-        setStartPlaySample(true);
+    console.log('useeee');
+
+    //Start the loop when there is 1 sample
+    if (numSamples === 1) {
+      startLoop = setInterval(() => {
+        if (active) {
+          setStartPlaySample(true);
+          console.log('noww');
+        }
       }, 8000);
-    if (numSamples > 1) {
+    } else if (numSamples === 0) {
+      clearInterval(startLoop);
+      startLoop = null;
+    }
+    if (numSamples > 0) {
       setStartPlaySample(false);
     }
-    // numSamples === 1 ? setStartPlaySample(true) : setStartPlaySample(false);
-    // numSamples === 0 && setStartPlaySample(true);
   }, [numSamples]);
+
   return (
     <div className="App">
-      {/* {console.log(startPlaySample)} */}
       <h1>Looper</h1>
-
-      {/* {console.log(numSamples)} */}
-
       <div className="container">
         {data.map((sample, i) => {
           return (
@@ -58,6 +64,7 @@ function App() {
         onClick={() => {
           setActive(!active);
           setNumSamples(0);
+          setStartPlaySample(false);
         }}></button>
       {!active && <div className="note">To start the loop hit play</div>}
     </div>

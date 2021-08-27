@@ -10,11 +10,11 @@ body {
 
 .play {
   background-color: #3f3f40;
-  color: white;
+  color: #f4e2c4;
 }
 
 .notPlay {
-  background-color: #d4435c;
+  background-color: #f4e2c4;
   /* color: wheat; */
 }
 

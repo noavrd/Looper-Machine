@@ -8,33 +8,26 @@ export default function LoopSample({
   setStartPlaySample,
 }) {
   const [play, setPlay] = useState(false);
-  // const
-
   const audioRef = useRef(new Audio(sample.url));
 
-  //Play sample
+  //When clicking to play the sample
   const toPlay = () => {
     if (numSamples === 0) {
       setStartPlaySample(true);
-      // audioRef.current.play();
-      // audioRef.current.loop = true;
     }
     setPlay(true);
     setNumSamples(numSamples + 1);
   };
 
+  //Start the sample at the begging of the loop
   useEffect(() => {
     if (startPlaySample && play) {
-      console.log('enterrrr');
+      audioRef.current.currentTime = 0;
       audioRef.current.play();
       audioRef.current.loop = true;
-      // } else if (startPlaySample && numSamples === 1 && play) {
-      //   console.log('starttttt');
-      //   audioRef.current.play();
-      //   audioRef.current.loop = true;
     }
   }, [startPlaySample]);
-  console.log(startPlaySample, play);
+
   //Pause sample
   const toPause = () => {
     setPlay(false);
@@ -47,6 +40,7 @@ export default function LoopSample({
     play ? toPause() : toPlay();
   };
 
+  //Pause all sample when clicking pause
   useEffect(() => {
     !active && toPause();
   }, [active]);
@@ -55,7 +49,6 @@ export default function LoopSample({
     <div
       onClick={() => active && checkPlay()}
       className={play ? 'play sample' : 'notPlay sample'}>
-      {/* <div>{sample.name}</div> */}
       <i className={`${sample.icon} icon`}></i>
     </div>
   );
