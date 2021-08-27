@@ -17,4 +17,5 @@ Maybe you will be the next music producer.
 2. Run cd client
 3. Run npm start
 
+## The app is totally responsive, so you can use it everywhere 🎉
 ENJOY!
