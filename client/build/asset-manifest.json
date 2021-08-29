@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.768cb375.chunk.css",
+    "main.js": "/static/js/main.bd9806b3.chunk.js",
+    "main.js.map": "/static/js/main.bd9806b3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5a4b73f4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5a4b73f4.js.map",
+    "static/js/2.31eac87e.chunk.js": "/static/js/2.31eac87e.chunk.js",
+    "static/js/2.31eac87e.chunk.js.map": "/static/js/2.31eac87e.chunk.js.map",
+    "static/js/3.28effeaf.chunk.js": "/static/js/3.28effeaf.chunk.js",
+    "static/js/3.28effeaf.chunk.js.map": "/static/js/3.28effeaf.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.768cb375.chunk.css.map": "/static/css/main.768cb375.chunk.css.map",
+    "static/js/2.31eac87e.chunk.js.LICENSE.txt": "/static/js/2.31eac87e.chunk.js.LICENSE.txt",
+    "static/media/MazePolitics.2d08c654.mp3": "/static/media/MazePolitics.2d08c654.mp3",
+    "static/media/SilentStar.f2d668af.mp3": "/static/media/SilentStar.f2d668af.mp3",
+    "static/media/breakbeats.37c82282.mp3": "/static/media/breakbeats.37c82282.mp3",
+    "static/media/App.css": "/static/media/cool-background1.dc9121a8.png",
+    "static/media/electricGuitar.230fcab8.mp3": "/static/media/electricGuitar.230fcab8.mp3",
+    "static/media/future_func.5eb417fc.mp3": "/static/media/future_func.5eb417fc.mp3",
+    "static/media/grooveA.f77c6da4.mp3": "/static/media/grooveA.f77c6da4.mp3",
+    "static/media/grooveB.3e1411b4.mp3": "/static/media/grooveB.3e1411b4.mp3",
+    "static/media/heavyFunc.52c24c81.mp3": "/static/media/heavyFunc.52c24c81.mp3",
+    "static/media/stompySlosh.27bdc145.mp3": "/static/media/stompySlosh.27bdc145.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a4b73f4.js",
+    "static/js/2.31eac87e.chunk.js",
+    "static/css/main.768cb375.chunk.css",
+    "static/js/main.bd9806b3.chunk.js"
+  ]
+}
