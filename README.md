@@ -8,7 +8,7 @@ You can start and stop any sample, when ever you want.
 The first sample will play automaticlly, but the rest of the samples will start when the first sample will end.
 Every sample cycle is 8 seconds.
 
-Just take your time and enjoy combinig diffrent samples and sound.
+Just take your time and enjoy combining diffrent samples and sound.
 Maybe you will be the next music producer.
 
 ## How To Upload The App?
